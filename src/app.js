@@ -375,7 +375,10 @@ app.get("/ai",async(req,res)=>{
   res.send("server is running")
     // res.send( await openFun())
 })
-
+app.get("/",async(req,res)=>{
+  res.send("server is running")
+    // res.send( await openFun())
+})
 
 
 
@@ -988,6 +991,9 @@ app.post('/otp', async(req, res) => {
 
         })
 
+})
+app.get('/*',async(req, res)=>{
+  res.status(404).send("404 error handle")
 })
 
 
